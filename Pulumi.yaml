@@ -1,0 +1,7 @@
+name: vpc
+runtime: nodejs
+description: A configurable AWS VPC infrastructure with public/private subnets, NAT gateways, and internet gateway using TypeScript
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: typescript

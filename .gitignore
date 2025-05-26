@@ -1,0 +1,49 @@
+# Node.js dependencies
+node_modules/
+
+# Pulumi local state & plugins
+.pulumi/
+
+# Stack configuration (contains secrets/config per stack)
+Pulumi.*.yaml
+!Pulumi.yaml
+
+# Encrypted secret files (if you use separate files)
+secrets.*.yaml
+
+# Build outputs
+dist/
+lib/
+build/
+
+# TypeScript artifacts
+*.js
+*.js.map
+*.d.ts
+*.tsbuildinfo
+
+# Lock files (if you regenerate them)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Environment files
+.env
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# OS-generated files
+.DS_Store
+Thumbs.db
