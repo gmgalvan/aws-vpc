@@ -18,12 +18,14 @@ A configurable AWS VPC infrastructure written in TypeScript and Pulumi.
 - Route tables and associations
 - Configurable subnet distribution across AZs
 
+Perfect for setting up secure, scalable AWS network infrastructure! 🎯
+
 ## ⚙️ Configuration Example
 
 ```yaml
 config:
   aws:region: us-west-2
-  vpc:name: demo-vpc
+  vpc:name: production-vpc
   vpc:cidrBlock: 172.16.0.0/16
   vpc:azCount: 3
   vpc:publicSubnets: 3
@@ -31,14 +33,8 @@ config:
   vpc:natPerPrivateSubnet: true
   vpc:tags: |
     {
-      "Environment": "Demo",
+      "Environment": "Production",
       "Team": "Infrastructure",
       "CostCenter": "Engineering"
     }
 ```
-
-This creates:
-
-- 1 VPC with 3 public + 6 private subnets across 3 AZs
-- 3 NAT Gateways (one per private subnet)
-- All resources tagged for cost tracking
